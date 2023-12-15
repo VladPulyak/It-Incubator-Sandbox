@@ -12,5 +12,8 @@
 //Solution:
 
 function htmlspecialchars(formData) {
-    // Insert your code here
-  }
+  formData.replace(/\w/gi, "&lt;");
+  return formData;
+}
+
+console.log(htmlspecialchars("<h2>Hello World</h2>"));
