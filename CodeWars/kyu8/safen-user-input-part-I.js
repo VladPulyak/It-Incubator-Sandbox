@@ -12,7 +12,11 @@
 //Solution:
 
 function htmlspecialchars(formData) {
-  formData.replace(/\w/gi, "&lt;");
+  formData = formData
+              .replace(/&/,"&amp;")
+              .replace(/</,"&lt;")
+              .replace(/>/,"&gt;")
+              .replace(/"/,"&quot;")
   return formData;
 }
 
