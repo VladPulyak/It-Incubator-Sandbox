@@ -15,5 +15,4 @@ function digitize(n) {
     } while (n > 0);
   
     return digits;
-  }
-  
+  }  
